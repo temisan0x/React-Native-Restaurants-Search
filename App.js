@@ -42,15 +42,17 @@ export default function App() {
     <View styles={styles.container}>
       <Header />
       <Search />
-      <FlatList
-        data={categoriesData}
-        renderItem={({ item }) => {
-          return <CategoryItem name={item.name} imageUrl={item.imageUrl} />
-        }}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={(category) => item.name}
-      />
+      <View style={{marginLeft:25}}>
+        <FlatList
+          data={categoriesData}
+          renderItem={({ item }) => {
+            return <CategoryItem name={item.name} imageUrl={item.imageUrl} />
+          }}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item.name}
+        />
+      </View>
       {/* <CategoryItem
         name="Beans and Plantain"
         imageUrl={require("./src/assets/images/beans.jpeg")}
