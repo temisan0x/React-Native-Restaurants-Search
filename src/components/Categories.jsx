@@ -2,8 +2,7 @@ import {useState} from "react"
 import { View, FlatList } from "react-native";
 import CategoryItem from "./CategoryItem";
 
-export default function Categories() {
-    const [term, setTerm]= useState("Beans and Plantain")
+export default function Categories({setTerm, term}) {
     //FlatList 
     categoriesData = [
         {

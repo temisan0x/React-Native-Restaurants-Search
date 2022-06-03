@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
         padding: 4,
         position: "absolute",
         bottom: 35,
-        left: 30
+        left: 30,
+        borderRadius: 4,
     },
     text: {
         color: "black",
