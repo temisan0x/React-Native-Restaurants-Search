@@ -42,14 +42,15 @@ export default function App() {
     <View styles={styles.container}>
       <Header />
       <Search />
-      <View style={{marginLeft:25}}>
+      <View >
         <FlatList
           data={categoriesData}
-          renderItem={({ item }) => {
-            return <CategoryItem name={item.name} imageUrl={item.imageUrl} />
+          renderItem={({ item, index }) => {
+            return <CategoryItem name={item.name} imageUrl={item.imageUrl} index={index}/>
           }}
           horizontal
           showsHorizontalScrollIndicator={false}
+          show
           keyExtractor={(item) => item.name}
         />
       </View>

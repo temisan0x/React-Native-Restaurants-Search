@@ -2,11 +2,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { elevation } from "../styles/styles";
 
-export default function CategoryItem({name, imageUrl}) {
+export default function CategoryItem({ name, imageUrl, index }) {
     //props are immutable(only-read)
     //props are properties, passed as function arguments to a component.
     return (
-        <View style={[styles.container, styles.elevation]}>
+        <View style={[styles.container, styles.elevation, index === 0 ? { marginLeft: 25 } : { marginLeft: 15 }]}>
             <View>
                 <Image source={imageUrl} style={styles.image} />
             </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: 'center',
-        marginTop:30
+        marginTop: 30
     },
     elevation,
     image: {
