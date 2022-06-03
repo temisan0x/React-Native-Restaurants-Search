@@ -8,7 +8,8 @@ export default function Search({setTerm}) {
 
     const handleEndEditing = () => {
         if (!input) return;
-        return setTerm(input);
+        setTerm(input);
+        setInput("")
     };
 
     return (
@@ -18,7 +19,8 @@ export default function Search({setTerm}) {
                 placeholder="Restaurant food"
                 style={styles.input}
                 onChangeText={(text) => { setInput(text) }}
-                onEndEditing={()=> handleEndEditing()}
+                onEndEditing={() => handleEndEditing()}
+                value={input}
             />
         </View>
     )
