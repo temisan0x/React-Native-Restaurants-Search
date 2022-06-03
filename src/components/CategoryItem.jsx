@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, Image } from "react-native";
 import { elevation } from "../styles/styles";
 
 export default function CategoryItem() {
+    //props are immutable(only-read)
+    //props are properties, passed as function arguments to a component.
     return (
         <View style={[styles.container, styles.elevation]}>
             <View>
@@ -29,6 +31,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: 'center',
+        marginTop:20
     },
     elevation,
     image: {
