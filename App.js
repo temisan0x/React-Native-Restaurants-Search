@@ -44,11 +44,12 @@ export default function App() {
       <Search />
       <FlatList
         data={categoriesData}
-        renderItem={({item}) => {
-          return <CategoryItem  name={item.name} imageUrl={item.imageUrl}/>
+        renderItem={({ item }) => {
+          return <CategoryItem name={item.name} imageUrl={item.imageUrl} />
         }}
         horizontal
         showsHorizontalScrollIndicator={false}
+        keyExtractor={(category) => item.name}
       />
       {/* <CategoryItem
         name="Beans and Plantain"
