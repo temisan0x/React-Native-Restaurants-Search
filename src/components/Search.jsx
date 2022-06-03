@@ -1,5 +1,5 @@
 import {useState} from "react"
-import { View, TextInput, StyleSheet, Text } from 'react-native';
+import { View, TextInput, StyleSheet } from 'react-native';
 import { FontAwesome } from "@expo/vector-icons";
 import {elevation} from "../styles/styles"
 

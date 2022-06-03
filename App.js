@@ -1,5 +1,5 @@
 import {useState} from "react"
-import { View, StyleSheet, StatusBar, FlatList } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 import Categories from "./src/components/Categories";
 import Header from "./src/components/Header";
 import Search from "./src/components/Search.jsx";
