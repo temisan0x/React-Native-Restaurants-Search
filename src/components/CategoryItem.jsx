@@ -2,7 +2,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { elevation } from "../styles/styles";
 
-export default function CategoryItem() {
+export default function CategoryItem({name}) {
     //props are immutable(only-read)
     //props are properties, passed as function arguments to a component.
     return (
@@ -16,7 +16,7 @@ export default function CategoryItem() {
                 end={{ x: 1, y: 1 }}
                 style={styles.textWrapper}
             >
-                <Text style={styles.text}>Beans and Plantain</Text>
+                <Text style={styles.text}>{name}</Text>
             </LinearGradient>
         </View>
     )

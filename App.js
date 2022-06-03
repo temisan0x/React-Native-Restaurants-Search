@@ -9,7 +9,18 @@ export default function App() {
     <View styles={styles.container}>
       <Header />
       <Search />
-      <CategoryItem/>
+      <CategoryItem
+        name="Beans and Plantain"
+
+      />
+      <CategoryItem
+        name="Rice and Stew"
+        
+      />
+      <CategoryItem
+        name="Beans and Plantain"
+        
+      />
       <StatusBar/>
     </View>
   );
