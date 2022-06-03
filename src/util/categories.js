@@ -1,6 +1,6 @@
 //FlatList 
 
-export default categoriesData = [
+export default categories = [
     {
         name: "Beans and Plantain",
         imageUrl: require("../assets/images/beans.jpeg"),

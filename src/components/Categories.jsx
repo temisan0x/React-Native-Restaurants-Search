@@ -1,12 +1,11 @@
 import { View, FlatList } from "react-native";
 import CategoryItem from "./CategoryItem";
-import categoriesData from "../util/categories"
 
-export default function Categories({setTerm, term}) {
+export default function Categories({setTerm, term, categories}) {
     return (
         <View >
             <FlatList
-                data={categoriesData}
+                data={categories}
                 renderItem={({ item, index }) => {
                     console.log(item);
                     return <CategoryItem
