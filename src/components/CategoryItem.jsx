@@ -24,14 +24,14 @@ export default function CategoryItem({name, imageUrl}) {
 
 const styles = StyleSheet.create({
     container: {
-        width: 170,
-        height: 170,
+        width: 200,
+        height: 200,
         borderRadius: 10,
-        marginHorizontal: 25,
+        marginHorizontal: 15,
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: 'center',
-        marginTop:20
+        marginTop:30
     },
     elevation,
     image: {
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     textWrapper: {
         padding: 4,
         position: "absolute",
-        bottom: 20,
-        left: 15
+        bottom: 35,
+        left: 30
     },
     text: {
         color: "black",
