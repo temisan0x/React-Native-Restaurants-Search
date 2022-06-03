@@ -2,11 +2,15 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { elevation } from "../styles/styles";
 
-export default function CategoryItem({ name, imageUrl, index }) {
+export default function CategoryItem({ name, imageUrl, index, active, handleClick }) {
     //props are immutable(only-read)
     //props are properties, passed as function arguments to a component.
     return (
-        <View style={[styles.container, styles.elevation, index === 0 ? { marginLeft: 25 } : { marginLeft: 15 }]}>
+        <View style={
+            [styles.container,
+                styles.elevation, index === 0 ? { marginLeft: 25 } : { marginLeft: 15 },
+                active ? { backgroundColor: "rgb(154,157,152)" } : { backgroundColor: "white" }
+            ]}>
             <View>
                 <Image source={imageUrl} style={styles.image} />
             </View>
@@ -24,14 +28,14 @@ export default function CategoryItem({ name, imageUrl, index }) {
 
 const styles = StyleSheet.create({
     container: {
-        width: 200,
-        height: 200,
+        width: 170,
+        height: 170,
         borderRadius: 10,
         marginHorizontal: 15,
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: 'center',
-        marginTop: 30
+        marginTop: 30,
     },
     elevation,
     image: {

@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
     backgroundText: {
         borderRadius: 12,
         padding: 6,
-        borderColor: "#68a0cf",
-        backgroundColor: "#68a0cf",
+        borderColor: "black",
+        backgroundColor: "black",
         borderWidth:1,
     }, 
 
