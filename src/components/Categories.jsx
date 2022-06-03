@@ -1,4 +1,3 @@
-import {useState} from "react"
 import { View, FlatList } from "react-native";
 import CategoryItem from "./CategoryItem";
 

@@ -9,7 +9,7 @@ export default function Search({setTerm}) {
     const handleEndEditing = () => {
         if (!input) return;
         setTerm(input);
-        setInput("")
+        setInput("");
     };
 
     return (
@@ -18,7 +18,7 @@ export default function Search({setTerm}) {
             <TextInput
                 placeholder="Restaurant food"
                 style={styles.input}
-                onChangeText={(text) => { setInput(text) }}
+                onChangeText={(text) => { setInput(text) }}//updates the value when there's a change.
                 onEndEditing={() => handleEndEditing()}
                 value={input}
             />
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         marginTop: 10,
-        marginHorizontal: 15,
+        marginHorizontal: 15, 
         backgroundColor: "white",
         padding: 15,
         borderRadius: 15,
