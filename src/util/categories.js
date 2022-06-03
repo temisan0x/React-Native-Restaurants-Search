@@ -2,15 +2,15 @@
 
 export default categories = [
     {
-        name: "Beans and Plantain",
+        name: "Burger",
         imageUrl: require("../assets/images/beans.jpeg"),
     },
     {
-        name: "Eba and Egusi",
+        name: "Dessert",
         imageUrl: require("../assets/images/eba.jpeg"),
     },
     {
-        name: "Chapman drink",
+        name: "Drinks",
         imageUrl: require("../assets/images/chapman.jpeg"),
     },
     {
