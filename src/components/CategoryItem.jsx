@@ -2,13 +2,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { elevation } from "../styles/styles";
 
-export default function CategoryItem({name}) {
+export default function CategoryItem({name, imageUrl}) {
     //props are immutable(only-read)
     //props are properties, passed as function arguments to a component.
     return (
         <View style={[styles.container, styles.elevation]}>
             <View>
-                <Image source={require("../assets/images/beans.jpeg")} style={styles.image} />
+                <Image source={imageUrl} style={styles.image} />
             </View>
             <LinearGradient
                 colors={['#ada996', '#f2f2f2', '#dbdbdb', '#eaeaea']}
