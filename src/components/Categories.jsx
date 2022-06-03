@@ -38,9 +38,9 @@ export default function Categories() {
 
     //setTimeout a function to run a callback after a set pertiod of time.
     //setTerm updates the state value
-    setTimeout(() => {
-        setTerm(term)
-    }, 3000)
+    // setTimeout(() => {
+    //     setTerm(term)
+    // }, 3000)
 
     return (
         <View >
@@ -53,7 +53,7 @@ export default function Categories() {
                         imageUrl={item.imageUrl}
                         index={index}
                         active={item.name === term}
-                        handleClick={() => setTerm(item.name)}
+                        handlePress={() => setTerm(item.name)}
                     />
                 }}
                 horizontal

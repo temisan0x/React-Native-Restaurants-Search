@@ -1,28 +1,30 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { elevation } from "../styles/styles";
 
-export default function CategoryItem({ name, imageUrl, index, active, handleClick }) {
+export default function CategoryItem({ name, imageUrl, index, active, handlePress }) {
     //props are immutable(only-read)
     //props are properties, passed as function arguments to a component.
     return (
-        <View style={
-            [styles.container,
+        <TouchableOpacity onPress={handlePress}>
+            <View style={
+                [styles.container,
                 styles.elevation, index === 0 ? { marginLeft: 25 } : { marginLeft: 15 },
                 active ? { backgroundColor: "rgb(154,157,152)" } : { backgroundColor: "white" }
-            ]}>
-            <View>
-                <Image source={imageUrl} style={styles.image} />
+                ]}>
+                <View>
+                    <Image source={imageUrl} style={styles.image} />
+                </View>
+                <LinearGradient
+                    colors={['#ada996', '#f2f2f2', '#dbdbdb', '#eaeaea']}
+                    start={{ x: 0, y: 0.5 }}
+                    end={{ x: 1, y: 1 }}
+                    style={styles.textWrapper}
+                >
+                    <Text style={styles.text}>{name}</Text>
+                </LinearGradient>
             </View>
-            <LinearGradient
-                colors={['#ada996', '#f2f2f2', '#dbdbdb', '#eaeaea']}
-                start={{ x: 0, y: 0.5 }}
-                end={{ x: 1, y: 1 }}
-                style={styles.textWrapper}
-            >
-                <Text style={styles.text}>{name}</Text>
-            </LinearGradient>
-        </View>
+        </TouchableOpacity>
     )
 }
 
