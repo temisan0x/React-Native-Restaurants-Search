@@ -12,8 +12,8 @@ export default function App() {
   
   return (
     <View styles={styles.container}>
-      <Header />
       <Search setTerm={setTerm}/>
+      <Header />
       <Categories
         setTerm={setTerm}
         term={term}

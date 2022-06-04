@@ -7,6 +7,7 @@ export default function CategoryItem({ name, imageUrl, index, active, handlePres
     //props are properties, passed as function arguments to a component.
     return (
         <TouchableOpacity onPress={handlePress}>
+            <Text style={styles.hr}></Text>
             <View style={
                 [styles.container,
                 styles.elevation, index === 0 ? { marginLeft: 25 } : { marginLeft: 15 },
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: 'center',
-        marginTop: 30,
+        marginTop: 20,
     },
     elevation,
     image: {
@@ -50,6 +51,11 @@ const styles = StyleSheet.create({
         bottom: 35,
         left: 30,
         borderRadius: 4,
+    },
+    hr: {
+        borderTopWidth: 2,
+        marginTop: 10,
+        borderColor:"grey"
     },
     text: {
         color: "black",

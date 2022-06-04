@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         flexDirection:"row",
-        marginTop: 30,
-        marginHorizontal: 20
+        marginTop: 40,
+        marginHorizontal: 30
     },
 
     lightHeader: {

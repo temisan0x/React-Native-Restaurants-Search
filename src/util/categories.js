@@ -1,6 +1,6 @@
 //FlatList 
 
-export default categories = [
+const categories = [
     {
         name: "Burger",
         imageUrl: require("../assets/images/beans.jpeg"),
@@ -30,3 +30,5 @@ export default categories = [
         imageUrl: require("../assets/images/yam.jpeg"),
     }
 ];
+
+export default categories;
